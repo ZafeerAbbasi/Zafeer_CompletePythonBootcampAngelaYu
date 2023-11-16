@@ -1,4 +1,3 @@
-"""Importing Turtle Module"""
 from turtle import Turtle, Screen
 
 
