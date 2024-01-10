@@ -8,7 +8,11 @@ import random
 current_index_dict = { }
 
 # ----------------- Accessing Data ----------------- 
-dataframe = pandas.read_csv( filepath_or_buffer="data/french_words.csv" )
+
+try:
+    dataframe = pandas.read_csv( filepath_or_buffer="words_to_learn.csv" )
+except FileNotFoundError:
+    dataframe = pandas.read_csv( filepath_or_buffer="data/french_words.csv" )
 data_dict = dataframe.to_dict( orient="records" )
 
 # ------------------ Switching Card Sides -----------
@@ -63,7 +67,7 @@ my_canvas.grid( row=0, column=0, columnspan=2, pady=20 )
 
 right_btn = Button( image=right_image, highlightthickness=0, command=got_it_right )
 right_btn.grid( row=1, column=1 )
-wrong_btn = Button( image=wrong_image, highlightthickness=0 )
+wrong_btn = Button( image=wrong_image, highlightthickness=0, command=switch_to_front )
 wrong_btn.grid( row=1, column=0 )
 
 
