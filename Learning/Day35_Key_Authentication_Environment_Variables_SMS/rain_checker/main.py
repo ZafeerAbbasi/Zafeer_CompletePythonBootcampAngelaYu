@@ -1,6 +1,6 @@
 import requests
 
-api_key = "d6cefb3a0bdda8392b60101d7ad27a73"
+api_key = "nope"
 params = {
     "appid": "nope",
     "lat": 49.137051,
