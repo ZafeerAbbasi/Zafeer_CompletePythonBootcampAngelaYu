@@ -2,7 +2,7 @@ import requests
 
 api_key = "d6cefb3a0bdda8392b60101d7ad27a73"
 params = {
-    "appid": "d6cefb3a0bdda8392b60101d7ad27a73",
+    "appid": "nope",
     "lat": 49.137051,
     "lon": -122.841766,
     "units": "metric",
